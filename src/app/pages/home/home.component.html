@@ -1,0 +1,11 @@
+<h1>Home component Padre</h1>
+<hr>
+
+<h3>{{ this.nombre }}</h3>
+
+<button class="btn btn-primary" (click)="this.cambiarNombre()">Cambiar nombre</button>
+
+<hr>
+
+<!-- Enviamos propiedades al componente hijo  y  el padre recibe propiedades del hijo-->
+<app-hijo [nombreHijo]="this.nombre" (emitirCambioNombreHijoAlPadre)="this.recibiendoDelPadre($event)"></app-hijo>
